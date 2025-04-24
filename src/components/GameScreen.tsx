@@ -9,7 +9,7 @@ type GameScreenProps = {
 };
 
 export default function GameScreen({ trainers }: GameScreenProps) {
-    const timeLimit = 30; // set le timer
+    const timeLimit = 300; // set le timer
     const [countdown, setCountdown] = useState(10);
     const [gameStarted, setGameStarted] = useState(false);
     const [timeLeft, setTimeLeft] = useState(timeLimit);
@@ -140,16 +140,16 @@ export default function GameScreen({ trainers }: GameScreenProps) {
         flexShrink={0}
         width="100%"
       >
-        <img
-            src={logo}
-            alt="Pokeball logo"
-            style={{
-            width: '30px',
-            height: '30px',
-            marginRight: '8px',
-            }}
-        />
-        <Typography variant="h6">Fildrongdex</Typography>
+      <img
+          src={logo}
+          alt="Pokeball logo"
+          style={{
+          width: '30px',
+          height: '30px',
+          marginRight: '8px',
+          }}
+      />
+      <Typography variant="h6">Fildrongdex</Typography>
         <Typography
             variant="subtitle1"
             noWrap
@@ -160,7 +160,7 @@ export default function GameScreen({ trainers }: GameScreenProps) {
                 margin: "0 auto",
             }}
             >
-            Challenge tes amis sur la 1er génération
+            {Math.floor(timeLeft / 60)}:{String(timeLeft % 60).padStart(2, "0")}
         </Typography>
       </Box>
 
