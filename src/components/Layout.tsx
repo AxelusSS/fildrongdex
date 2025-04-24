@@ -33,12 +33,12 @@ export default function Layout({ trainers, children, bottomInput }: LayoutProps)
         width="100%"
       >
         <img
-            src={logo} // Assurez-vous que logo pointe vers l'image pokeball.svg importée
+            src={logo}
             alt="Pokeball logo"
             style={{
-            width: '30px', // Ajustez la taille de l'image selon vos besoins
+            width: '30px',
             height: '30px',
-            marginRight: '8px', // Espacement entre le logo et le texte
+            marginRight: '8px',
             }}
         />
         <Typography variant="h6">Fildrongdex</Typography>
